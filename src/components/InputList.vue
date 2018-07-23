@@ -1,9 +1,15 @@
 <template>
-  <div>
-    <select v-model="type">
-      <option v-for="(type, index) in types" :key="index" :value="type"> {{ type }} </option>
-    </select>
-    <input type="text" v-model="text" @keyup.enter="submit(type, text)">
+  <div class="columns is-gapless">
+    <div class="column is-2">
+      <div class="select">
+        <select v-model="type">
+          <option v-for="(type, index) in types" :key="index" :value="type"> {{ type }} </option>
+        </select>
+      </div>
+    </div>
+    <div class="column">
+      <input class="input is-rounded" type="text" placeholder="todolist...." v-model="text" @keyup.enter="submit(type, text)">
+    </div>
   </div>
 </template>
 
