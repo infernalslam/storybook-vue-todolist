@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <div class="columns is-mobile">
       <div class="column is-half is-offset-one-quarter">
         <input-list :types="types" :submit="submit"></input-list>
